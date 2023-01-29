@@ -9,6 +9,7 @@ import dalleRoutes from './routes/dalleRoutes.js';
 dotenv.config();
 
 const app = express();
+const router = express.Router();
 
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
