@@ -2,15 +2,15 @@ import mongoose from 'mongoose';
 
 const Post = new mongoose.Schema({
   name: {
-    type: 'String',
+    type: String,     // <--- this line was incorrect
     required: true
   },
   prompt: {
-    type: 'String',
+    type: String,     // <--- this line was incorrect
     required: true
   },
   photo: {
-    type: 'String',
+    type: String,
     required: true
   },
 })

@@ -5,7 +5,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import Post from '../mongodb/models/post.js';
 
 dotenv.config();
-
+// console.log(process.env.CLOUDINARY_CLOUD_NAME)
 const router = express.Router();
 
 cloudinary.config({
@@ -25,6 +25,7 @@ router.route('/').get(async (req, res) => {
   }
 });
 
+
 // CREATE ONE POST
 router.route('/').post(async (req, res) => {
   try {
@@ -39,6 +40,7 @@ router.route('/').post(async (req, res) => {
 
     res.status(200).json({ success: true, data: newPost });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ success: false, message: 'Unable to create a post, please try again' });
   }
 });
