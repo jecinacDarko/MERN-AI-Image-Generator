@@ -2,11 +2,11 @@ import mongoose from 'mongoose';
 
 const Post = new mongoose.Schema({
   name: {
-    type: String,     // <--- this line was incorrect
+    type: String,
     required: true
   },
   prompt: {
-    type: String,     // <--- this line was incorrect
+    type: String,
     required: true
   },
   photo: {
